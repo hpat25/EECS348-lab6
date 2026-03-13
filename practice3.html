@@ -1,0 +1,46 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+<h2>EECS 348 PRACTICE 3</h2>
+
+<h3>First Password:</h3>
+<input type="text" id="firstpassword">
+<br><br>
+
+<h4>Second Password:</h4>
+<input type="text" id="secondpassword">
+<br><br>
+
+<button onclick="checkpassword()">Validate password</button>
+
+
+<script>
+
+function checkpassword()
+{
+    var p1=document.getElementById("firstpassword").value;
+    var p2=document.getElementById("secondpassword").value;
+
+    if(p1.length < 8) {
+        alert("The length of the first password is less than 8 letters!");
+    }
+        
+    else if(p1!=p2)
+       {
+        alert("Passwords do not match");
+    }
+    else
+{
+        alert("Passwords match!");
+      }
+
+}
+
+</script>
+</body>
+
+</html>

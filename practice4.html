@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>EECS 348 Practice 4</h1>
+
+</head>
+
+<body>
+
+<form method="post">
+Size of the multiplication table:
+<input type="text" name="size"><br>
+<input type="submit">
+</form>
+
+<?php
+$size=$_POST["size"];
+
+echo "<table border='1'>";
+echo "<tr>";
+echo "<td></td>";
+
+for ($i=1;$i<=$size;$i++) {
+    echo "<td>".$i."</td>";
+}
+
+echo "</tr>";
+
+for ($i=1;$i<=$size;$i++) {
+    echo "<tr>"; 
+    echo "<td>".$i."</td>";
+    for ($j=1;$j<=$size;$j++) {
+        echo "<td>".$i*$j."</td>"; 
+    }
+    echo "</tr>"; 
+}
+echo "</table>"; 
+
+?>
+
+</body>
+</html>

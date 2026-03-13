@@ -1,0 +1,48 @@
+<html>
+
+<head>
+<title>Practice 2</title>
+</head>
+
+
+<body>
+    
+<p id="paragraph">University of Kansas</p>
+
+Border R(0-255):<input type="text" id="borderr"><br>
+Border G(0-255):<input type="text" id="borderg"><br>
+Border B(0-255): <input type="text" id="borderb"><br>
+
+Border Width: <input type="text" id="width"><br>
+
+Background R(0-255):<input type="text" id="backgroundr"><br>
+Background G(0-255):<input type="text" id="backgroundg"><br>
+Background B(0-255):<input type="text" id="backgroundb"><br>
+
+<button onclick="changecolor()">Change color!</button>
+
+<script>
+
+function changecolor()
+{
+    var backgroundr=document.getElementById("backgroundr").value;
+    var backgroundg=document.getElementById("backgroundg").value;
+    var backgroundb=document.getElementById("backgroundb").value;
+
+    var borderr=document.getElementById("borderr").value;
+    var borderg=document.getElementById("borderg").value;
+    var borderb=document.getElementById("borderb").value;
+
+    var w=document.getElementById("width").value;
+    var p=document.getElementById("paragraph");
+
+    p.style.backgroundColor="rgb("+backgroundr+","+backgroundg+","+backgroundb+")";
+    p.style.borderColor="rgb("+borderr+","+borderg+","+borderb+")";
+    p.style.borderWidth=w+"px";
+    p.style.borderStyle="solid";
+
+}
+</script>
+</body>
+
+</html>
